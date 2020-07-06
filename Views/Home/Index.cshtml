@@ -1,0 +1,15 @@
+﻿@model DataGov_API_Intro_ej.Models.Parks
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<a asp-action="Link" asp-controller="Home">HTML Link Example</a>
+<br/>
+<br/>
+
+@foreach(DataGov_API_Intro_ej.Models.Park park in Model.data)
+{
+    @(park.parkCode + " " + park.fullName + " " + park.latLong)
+    <br />
+}
